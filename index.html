@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunotify</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sunotify</div>
+    </header>
+    <div class="container">
+        <main>
+            <section class="content">
+                <h1>Welcome to Your Music</h1>
+                <div class="album-grid">
+                    <div class="album" onclick="openModal('./assets/img/utsu_byebye.png', './assets/audio/utsu_byebye.mp3','鬱バイバイ')">
+                        <img src="./assets/img/utsu_byebye.png" alt="Album 1">
+                        <p>鬱バイバイ</p>
+                    </div>
+                    <div class="album" onclick="openModal('./assets/img/mental_health.png', './assets/audio/mental_health.mp3','メンヘラ')">
+                        <img src="./assets/img/mental_health.png" alt="Album 2">
+                        <p>メンヘラ</p>
+                    </div>
+                    <div class="album" onclick="openModal('./assets/img/syuden_dance_floor.png', './assets/audio/syuden_dance_floor.mp3','終電ダンスフロア')">
+                        <img src="./assets/img/syuden_dance_floor.png" alt="Album 3">
+                        <p>終電ダンスフロア</p>
+                    </div>
+                    <div class="album" onclick="openModal('./assets/img/UFOLIVE.png', './assets/audio/UFOLIVE.mp3','UFOLIVE')">
+                        <img src="./assets/img/UFOLIVE.png" alt="Album 4">
+                        <p>UFOLIVE</p>
+                    </div>
+                    <!-- 追加のアルバムをここに追加 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Album Image" class="modal-image">
+            <p id="songTitle" class="song-title"></p>
+            <audio id="audio" controls>
+                <source id="audioSource" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2024 Created by ChatGPT.</footer>
+
+
+    <script src="./assets/anim.js"></script>
+</body>
+</html>
