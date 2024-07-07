@@ -122,6 +122,13 @@ footer{
     text-align: center;
 }
 
+/* PCのサイズでもアルバムを中央揃え */
+@media (min-width: 768px) {
+    .album-grid {
+        justify-content: center;
+    }
+}
+
 /* メディアクエリ */
 @media (min-width: 768px) {
     .container {
